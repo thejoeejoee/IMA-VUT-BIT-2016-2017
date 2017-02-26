@@ -10,13 +10,15 @@ f(x)=\frac{3x^3+x^2-4x+16}{x^5+5x^4+9x^3+13x^2+14x+6}
 \subsection{Rozbor příkladu}
 Máme za úkol najít rozklad na parciální zlomky. Polynom ve jmenovateli ma vyšší stupneň, než polynom v čitateli. Není třeba provádět dělení, a můžeme rovnou přistoupit k rozkladu.
 
-Pro rozklad polynomu ve jmenovateli použijeme hornerovo schéma. Poté si napíšeme rovnici v obecném tvaru, kde v čitateli 
+Pro rozklad polynomu ve jmenovateli použijeme hornerovo schéma. Poté si napíšeme rovnici vyjadřující rozklad na jednotlivé parciální zlomky v obecném tvaru. Podle rovnice si sestavíme soustavu rovnic pro výpočet jednotlivých koeficientů. Řešením rovnice budou koeficienty z množiny $Q$. Tím získáme rozklad funkce na parciální zlomky.
 
 \subsection{Řešení}
 
-\noindent Rozklad čitatele za pomoci hornerova schémata
+Rozklad čitatele za pomoci hornerova schémata na součin závorek.
 
-\addvbuffer[12pt 8pt] {
+	\begin{table}[htb]
+	\centering
+	
 	\begin{tabular}{|l|l|l|l|l|l|l|l|}
 	\hline
 		 & 1 & 5 & 9 & 13 & 14 & 6 &    \\ \hline
@@ -25,9 +27,11 @@ Pro rozklad polynomu ve jmenovateli použijeme hornerovo schéma. Poté si napí
 	  -3 & 1 & 2 & 0 &    &    &   & OK \\ 
 	\hline
 	\end{tabular}
-}
+	\caption{Rozklad čitatele}
+	\end{table}
 
-Rozklad jmenovatele na součin v oboru reálných čísel je tedy.
+
+Rozklad jmenovatele na součin v oboru reálných čísel je tedy. 
 
 \begin{displaymath}
 	x^5+5x^4+9x^3+13x^2+14x+6 = (x+1)^2(x+2)(x^2+2)
