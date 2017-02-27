@@ -8,6 +8,44 @@ f(x) = x^2(\frac{\pi}{4}-arctg(\frac{x^2}{x^2-1}))
 \end{displaymath}
 
 \subsection{Rozbor příkladu}
+
+Máme najít asymptoty grafu funkce. To znamená najít všechny svislé asymptoty, šikmé asymptoty a vodorovné asymptoty.
+
+Svislou asymptotou rozumíme přímku ve tvaru $x=a$, jestliže 
+
+\begin{displaymath}
+\lim_{x \to a^-} f(x) = \pm \infty \bigvee\lim_{x \to a^+} f(x) = \pm \infty
+\end{displaymath}
+
+Vodorovnou asymptotou rozumíme přímku ve tvatu $y=a$ jestliže
+
+\begin{displaymath}
+\lim_{x \to +\infty} f(x) = c \bigvee\lim_{x \to - \infty} f(x) = c
+\end{displaymath}
+
+Šikmmou asymptotou rozumíme přímku, ve tvaru $y=ax+b;a \neq 0$. Ta existuje v případě, že
+
+\begin{displaymath}
+\lim_{x \to \pm \infty} f(x) = c ;c \neq 0
+\end{displaymath}
+
+Tyto limity je třeba najít a ověřit.
+
 \subsection{Řešení}
+
+\subsubsection{Svislé asymptoty}
+Limita ze součinu dvou závorek je rovna $ \pm \infty$, pokud jedna z techto závorek je rovna $\pm \infty$. Výraz $x^2$ je primitiní funkcí, která má nevlastní limitu pouze v $\pm \infty$ Výraz $\frac{\pi}{4}-arctg(\frac{x^2}{x^2-1})$ má obor hodnot $(-\frac{\pi}{2};+\frac{3\pi}{4})$ Funkce tedy nemá svislou asymptotu.
+\subsubsection{Vodorovné asymptoty}
+\begin{displaymath}
+\lim_{x \to + \infty} f(x) =\underbrace{x^2}_{\rightarrow+\infty}(\frac{\pi}{4}-\underbrace{arctg(\frac{x^2}{x^2-1})}_{\rightarrow 0.7854}) = + \infty \cdot 0
+\end{displaymath}
+
+\begin{displaymath}
+\lim_{x \to - \infty} f(x) =\underbrace{x^2}_{\rightarrow+\infty}(\frac{\pi}{4}-\underbrace{arctg(\frac{x^2}{x^2-1})}_{\rightarrow 0.7854}) = \infty \cdot 0
+\end{displaymath}
+
+????
+
+\subsubsection{Šikmé asymptoty}
 
 \todo{2. úkol}
