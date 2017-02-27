@@ -36,16 +36,45 @@ Tyto limity je třeba najít a ověřit.
 \subsubsection{Svislé asymptoty}
 Limita ze součinu dvou závorek je rovna $ \pm \infty$, pokud jedna z techto závorek je rovna $\pm \infty$. Výraz $x^2$ je primitiní funkcí, která má nevlastní limitu pouze v $\pm \infty$ Výraz $\frac{\pi}{4}-arctg(\frac{x^2}{x^2-1})$ má obor hodnot $(-\frac{\pi}{2};+\frac{3\pi}{4})$ Funkce tedy nemá svislou asymptotu.
 \subsubsection{Vodorovné asymptoty}
+
+
 \begin{displaymath}
-\lim_{x \to + \infty} f(x) =\underbrace{x^2}_{\rightarrow+\infty}(\frac{\pi}{4}-\underbrace{arctg(\frac{x^2}{x^2-1})}_{\rightarrow 0.7854}) = + \infty \cdot 0
+\lim_{x \to - \infty}\underbrace{x^2}_{\rightarrow+\infty}(\frac{\pi}{4}-\underbrace{arctg(\frac{x^2}{x^2-1})}_{\rightarrow \pi/4}) = \infty \cdot 0
+\end{displaymath}
+\begin{displaymath}
+\lim_{x \to - \infty}\underbrace{x^2}_{\rightarrow+\infty}(\frac{\pi}{4}-\underbrace{arctg(\frac{x^2}{x^2-1})}_{\rightarrow \pi/4}) = \infty \cdot 0
+\end{displaymath}
+
+
+Zjitíme, jestli funkce je sudá.
+
+\begin{displaymath}
+x^2(\frac{\pi}{4}-arctg(\frac{x^2}{x^2-1})) = 
+(-x)^2(\frac{\pi}{4}-arctg(\frac{(-x)^2}{(-x)^2-1}))
+\end{displaymath}
+
+Což platí. Funkce má tedy nanejvýše jednu vodorovnou asymptotu. Pro výpočet limity použijeme l-hospitalovo pravidlo.
+
+\begin{displaymath}
+\lim_{x \to \pm \infty}x^2(\frac{\pi}{4}-arctg(\frac{x^2}{x^2-1})) = \lim_{x \to \infty}\frac{\frac{\pi}{4}-arctg(\frac{x^2}{x^2-1})}{x^{-2}} =
 \end{displaymath}
 
 \begin{displaymath}
-\lim_{x \to - \infty} f(x) =\underbrace{x^2}_{\rightarrow+\infty}(\frac{\pi}{4}-\underbrace{arctg(\frac{x^2}{x^2-1})}_{\rightarrow 0.7854}) = \infty \cdot 0
+= \lim_{x \to \pm \infty} \frac{\frac{1}{1+(\frac{x^2}{x^2-1})^2}\cdot\frac{2x(x^2-1)-2x\cdot x^2}{(x^2-1)^2}}{-2x^{-3}} = \lim_{x \to \pm \infty}\frac{1}{1+(\frac{x^2}{x^2-1})^2}\cdot\frac{2x(x^2-1)-2x\cdot x^2}{(x^2-1)^2} \cdot (-\frac{1}{2}) \cdot x^{-3} 
 \end{displaymath}
 
-????
+
+\begin{displaymath}
+= \lim_{x \to \pm \infty} \frac{-x^4+2x^2-1}{2x^4-2x^2+1} \cdot \frac{x^4}{x^4-2x^2+1} = \lim_{x \to \pm \infty} \frac {-x^8+ \overbrace{\cdots}^{\rightarrow0}}{2x^8 +\underbrace{\cdots}_{\rightarrow0} } = -\frac{1}{2}
+\end{displaymath}
+
+Funkce má tedy jedinou vodorovnou asymtotu s rovnicí
+\begin{displaymath}
+y = - \frac{1}{2}
+\end{displaymath}
 
 \subsubsection{Šikmé asymptoty}
+
+Jelikož $\lim_{x \to \pm \infty} f(x) = c$, tak potom $\lim_{x \to \pm \infty} \frac{f(x)}{x} = 0$ Šikmá asymptota neexistuje. 
 
 \todo{2. úkol}
