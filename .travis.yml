@@ -1,1 +1,4 @@
 language: generic
+
+install:
+    - "sudo apt-get update && sudo apt-get install texlive-full texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended texlive-lang-czechslovak latex-xcolor"
