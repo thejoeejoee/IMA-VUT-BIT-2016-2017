@@ -2,7 +2,7 @@ language: generic
 
 install:
     - cd 01
-    - make install
+    - sudo make install
 
 script:
     - make
