@@ -1,49 +1,52 @@
 \section{5. úkol}
-
 \subsection{Zadanie}
- Najděte největší a nejmenší hodnotu funkce $f(x)=\sqrt[3]{(x+1)^2} -\sqrt[3]{(x-1)^2}$ na intervale $ <-2,2>$.
+ Najděte největší a nejmenší hodnotu funkce $f(x)=\sqrt[3]{(6x^2-x^3} $ na intervale $ <-2,9>$.
 \subsection{Výpočet}
+Prepíšeme na mocninový tvar
 \begin{displaymath}
-f'(x)=\left(\frac{2}{3}*\frac{1}{\sqrt[3]{(x+1)}}\right)*1\-\left(\frac{2}{3}*\frac{1}{\sqrt[3]{(x-1)}}\right)*1
+f(x)=(6x^2-x^3)^\frac{1}{3}
+\end{displaymath}
+
+\begin{displaymath}
+f'(x)=\left(\frac{1}{3}\cdot\frac{1}{\sqrt[3]{(6x^2-x^3)}}\right)\cdot(12x-3x^2)
 \end{displaymath}
 
 Upravíme na vhodný tvar a nájdeme stacionárne body
 \begin{displaymath}
-f'(x)=\frac{2*(\sqrt[3]{(x-1)}-\sqrt[3]{(x+1))}}{3*\sqrt[3]{(x+1)}*\sqrt[3]{(x-1)}}
+f'(x)=\frac{3\cdot(4x-x^2)}{3\cdot\sqrt[3]{(6x^2-x^3)}}
+\end{displaymath}
+\begin{displaymath}
+6x^2-x^3\neq0
+\end{displaymath}
+\begin{displaymath}
+x^2(6-x)\neq0
+\end{displaymath}
+\begin{displaymath}
+x\neq0 \wedge  x\neq6
+\end{displaymath}
+\begin{displaymath}
+D(f')=R-\{0,6\}
+\end{displaymath}
+Deriváciu položíme rovnú 0. Derivácia je nulova ak jej čitateľ sa rovná 0.
+\begin{displaymath}
+x\cdot(4-x)
 \end{displaymath}
 
+\begin{displaymath}
+x=0 \Rightarrow x\notin D(f)
+\end{displaymath}
+\begin{displaymath}
+x=4
+\end{displaymath}
+K stacionarnym bodom pridáme ešte hraničné hodnoty. 
+Stacionárne body sú: 0,4,6,9 
+\begin{displaymath}
+f(0)=0 \hspace{10mm} f(4)=\sqrt[3]{32}\doteq 3,17 \hspace{10mm}
+\end{displaymath}
+\begin{displaymath}
+f(6)=0 \hspace{10mm} f(9)=\sqrt[3]{-243}\doteq -6.24
+\end{displaymath}
 \begin{center}
-Body $x=1 \wedge  x=1$ su stacionarne body.
-\end{center}
-
-Zistíme kedy sa derivácia rovná 0. 
-
-\begin{displaymath}
-2*(\sqrt[3]{(x-1)}-\sqrt[3]{(x+1))}=0
-\end{displaymath}
-
-Upravíme podľa vzorca $a^2-b^2$ \\
-\begin{displaymath}
-\left(\sqrt[6]{(x-1)}-\sqrt[6]{(x+1)}\right)*\left(\sqrt[6]{(x-1)}+\sqrt[6]{(x+1)}\right)=0 
-\end{displaymath}
-
-\begin{displaymath}
-x-1=x+1 \Rightarrow -1\neq1 
-\end{displaymath}
-
-\begin{displaymath}
-x-1=-x-1 \Rightarrow 2x=0
-\end{displaymath}
-
-K stacionárnym bodom pridáme ešte hraničné hodnoty$ <-2,2>$.\\
-Dostaneme body $-2,-1,0,1,2$. Tieto body dosadíme do základnej funkcie.
-\begin{displaymath}
-f(-2)=1-\sqrt[3]{9} \hspace{10mm} f(-1)=-\sqrt[3]{4} \hspace{10mm}  f(0)=0 
-\end{displaymath}
-\begin{displaymath}
-f(1)=\sqrt[3]{4} \hspace{20mm} f(2)=\sqrt[3]{9}-1
-\end{displaymath}
-\begin{center}
-\large{Maximum na intevale $ <-2,2>$ je v bode $x=1$ \\
- Minimum je v bode $x=-1$}
+\large{Maximum na intevale $ <-2,9>$ je v bode $x=4$ \\
+ Minimum je v bode $x=9$}
 \end{center}
