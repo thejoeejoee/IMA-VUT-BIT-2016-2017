@@ -1,23 +1,26 @@
 \section{5. úkol}
 \subsection{Zadanie}
- Najděte největší a nejmenší hodnotu funkce $f(x)=\sqrt[3]{(6x^2-x^3} $ na intervale $ <-2,9>$.
+ Najděte největší a nejmenší hodnotu funkce $f(x)=\sqrt[3]{(6x^2-x^3)} $ na intervale $ <-2,9>$.
+
+\subsection{Rozbor příkladu}
+Funkce může nabývat svého maxima a minima v bodech, kdy je derivace rovna nule nebo v bodech, kde není derivace definována. Vypočítáme proto první derivaci funkce a najdeme tyto body. K bodům přidáme krajní body zadaného intervalu.
+
+V těchto bodech zjistíme funkční hodnoty, z čehož zjistíme v kterých bodech má funkce maximum a vkterých bodech má funkce minimum.
 \subsection{Výpočet}
-Určíme definičný obor: $D(f)=R$
+Určíme definičný obor funkce: $D(f)=R$
 
-Prepíšeme na mocninový tvar
-
-\begin{displaymath}
-f(x)=(6x^2-x^3)^\frac{1}{3}
-\end{displaymath}
+Funkci máme zadanou s odmocninami. Odmocniny si přepíšeme do tvaru mocnin.
 
 \begin{displaymath}
-f'(x)=\left(\frac{1}{3}\cdot\frac{1}{\sqrt[3]{(6x^2-x^3)}}\right)\cdot(12x-3x^2)
+f(x)=\sqrt[3]{(6x^2-x^3)}=6x^2-x^3)^\frac{1}{3}
 \end{displaymath}
 
-Upravíme na vhodný tvar a nájdeme stacionárne body
+Najdeme první derivaci funkce a upravíme ji na vhodný tvar tak, abychom snáze našli stacionární body a určili definiční obor $f'x)$
+
 \begin{displaymath}
-f'(x)=\frac{3\cdot(4x-x^2)}{3\cdot\sqrt[3]{(6x^2-x^3)}}
+f'(x)=\left(\frac{1}{3}\cdot\frac{1}{\sqrt[3]{(6x^2-x^3)}}\right)\cdot(12x-3x^2)=\frac{3\cdot(4x-x^2)}{3\cdot\sqrt[3]{(6x^2-x^3)}}
 \end{displaymath}
+Jmenovatel zlomku nesmí být roven 0. Z následující nerovnice zjistíme body, kde není derivace definována. V těchto bodech může také funkce nabývat svého maxima nebo minima (limita derivace může být $\pm \infty$
 \begin{displaymath}
 6x^2-x^3\neq0
 \end{displaymath}
@@ -30,26 +33,16 @@ x\neq0 \wedge  x\neq6
 \begin{displaymath}
 D(f')=R-\{0,6\}
 \end{displaymath}
-Deriváciu položíme rovnú 0. Derivácia je nulova ak jej čitateľ sa rovná 0.
+Derivaci položíme rovnu 0. To může nastat pouze v případě, kdy čitatel zlomku je roven 0.
 \begin{displaymath}
-x\cdot(4-x)
-\end{displaymath}
-
-\begin{displaymath}
-x=0 \Rightarrow x\notin D(f)
-\end{displaymath}
-\begin{displaymath}
-x=4
+x\cdot(4-x) = 0 \Rightarrow x = 0 \vee x = 4
 \end{displaymath}
 K stacionarnym bodom pridáme ešte hraničné hodnoty. 
-Stacionárne body sú: 0,4,6,9 
+Podezřelé hodnoty tedy jsou body $ \in{-2,0,4,6,9} $
 \begin{displaymath}
-f(0)=0 \hspace{10mm} f(4)=\sqrt[3]{32}\doteq 3,17 \hspace{10mm}
+f(0) = 0, f(4) \doteq 3.17, f(6) = 0, f(-2) \doteq 3.17, f(9) \doteq 3.12
 \end{displaymath}
-\begin{displaymath}
-f(6)=0 \hspace{10mm} f(9)=\sqrt[3]{-243}\doteq -6.24
-\end{displaymath}
-\begin{center}
-\large{Maximum na intevale $ <-2,9>$ je v bode $x=4$ \\
- Minimum je v bode $x=9$}
-\end{center}
+
+Maximum na intevale $ <-2,9>$ je v bodech $x=4$ a $x=6$ jeho hodnota $\doteq 3.17$
+
+Minimum na intevale $ <-2,9>$ je v bode $x=4$ a $x=9$ a jeho hodnota $\doteq 0$
