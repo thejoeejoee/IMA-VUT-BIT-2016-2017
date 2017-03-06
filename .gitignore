@@ -181,3 +181,6 @@ TSWLatexianTemp*
 
 # pgf-plot
 *.pgf-plot*
+
+# martin
+/01/hw.pdf
