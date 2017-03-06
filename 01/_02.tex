@@ -9,7 +9,7 @@ f(x) = x^2\Big(\frac{\pi}{4}-arctg\Big(\frac{x^2}{x^2-1}\Big)\Big)
 
 \subsection{Rozbor příkladu}
 
-Máme najít asymptoty grafu funkce. To znamená najít svislé asymptoty, šikmé asymptoty i vodorovné asymptoty.
+Máme najít asymptoty grafu funkce, což znamená najít svislé, šikmé i vodorovné asymptoty.
 
 Svislou asymptotou rozumíme přímku ve tvaru $x=a$, jestliže 
 
@@ -17,7 +17,7 @@ Svislou asymptotou rozumíme přímku ve tvaru $x=a$, jestliže
 \lim_{x \to a^-} f(x) = \pm \infty \bigvee\lim_{x \to a^+} f(x) = \pm \infty
 \end{displaymath}
 
-Vodorovnou asymptotou rozumíme přímku ve tvatu $y=a$, jestliže
+Vodorovnou asymptotou rozumíme přímku ve tvaru $y=a$, jestliže
 
 \begin{displaymath}
 \lim_{x \to +\infty} f(x) = c \bigvee\lim_{x \to - \infty} f(x) = c
@@ -34,7 +34,14 @@ Tyto limity je třeba najít a ověřit.
 \subsection{Řešení}
 
 \subsubsection{Svislé asymptoty}
-Limita ze součinu dvou závorek je rovna $ \pm \infty$, pokud jedna z techto závorek je rovna $\pm \infty$. Výraz $x^2$ je primitiní funkcí, která má nevlastní limitu pouze v $\pm \infty$ Výraz $\frac{\pi}{4}-arctg\big(\frac{x^2}{x^2-1}\big)$ má obor hodnot $\big(-\frac{\pi}{2};+\frac{3\pi}{4}\big)$ Funkce tedy nemá svislou asymptotu.
+Funkce může mít svislou asymptotu pouze v bodech, ve kterých je nespojitá. Určíme si proto body nespojitosti. Budou to body, ve kterých jmenovatel argumentu funkce $arctg(x) = 0$, protože nulou nelze dělit.
+
+\begin{displaymath}
+x^2-1 \neq 0 \implies x \neq 1 \wedge x \neq -1 \implies D(f) = \mathbb{R}
+\end{displaymath}
+
+Limita ze součinu dvou závorek je rovna $ \pm \infty$, pokud alespoň jedna z těchto závorek je rovna $\pm \infty$. Obor hodnot funkce $arctg(x) = <-\pi/2,\pi/2>$. Můžeme tedy říct, že $\frac{\pi}{4}-arctg(\frac{x^2}{x^2-1})$ se nikdy nebude limitně blížit k $\pm \infty$. Musel by se výraz $x^2$ rovnat v bodech nespojitosti $\pm \infty$. Vzhledem k tomu, že $(-1)^2 = 1^2 = 1$, můžeme tvrdit, že funkce nemá svisou asymptotu, protože v žádném ze svých bodů nemá nespojitost druhého druhu. Levá a pravá limita by byly rovny konstantě $\mathbb{C}$. Ve výpočtu není třeba dále pokračovat.
+
 \subsubsection{Vodorovné asymptoty}
 
 \begin{displaymath}
