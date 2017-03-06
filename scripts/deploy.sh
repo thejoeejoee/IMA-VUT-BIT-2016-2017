@@ -21,7 +21,7 @@ git config --global user.email "noreply@travis.com"
 git config --global user.name "Travis CI"
 
 git commit -m "Compiled pdf from ${SHA}."
-git push $SSH_REPO $TARGET_BRANCH
+git push $SSH_REPO
 
 
 # Clean out existing contents
