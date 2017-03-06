@@ -11,4 +11,4 @@ script:
     - cd ..
 
 after_success:
-    - sudo ./scripts/deploy.sh
+    - ./scripts/deploy.sh
