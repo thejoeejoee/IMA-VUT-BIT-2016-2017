@@ -1,0 +1,14 @@
+language: generic
+
+install:
+    - cd 01
+    - sudo make install
+    - cd ..
+
+script:
+    - cd 01
+    - make
+    - cd ..
+
+after_success:
+    - sudo ./scripts/deploy.sh
