@@ -5,6 +5,98 @@ Na grafu funkce \(f(x) = x^2 - x\) najděte bod, který má nejkratší vzdálen
 \todo{3. úkol}
 
 \subsection{Řešení}
+
+Určíme si účelovú funkciu, ktorej funkčné hodnoty budú nadobúdať hodnoty vzdialenosti od daného bodu A.
+
+\begin{displaymath}
+u(x)=\sqrt[2]{(x-x_0)^2 + (y-y_0)^2}
+\end{displaymath}
+\begin{displaymath}
+u(x)=\sqrt[2]{(x-0)^2 + (x^2-x-1)^2}
+\end{displaymath}
+\begin{displaymath}
+u(x)=(x^4 -2x^3 + 2x + 1)^{\frac{1}{2}}
+\end{displaymath}
+
+Zo zadania vyplýva, že máme nájsť x, ktorého funkčná hodnota je najmenšia, čiže najkratšia vzdialenosť. \\
+K nájdeniu globálneho minima funkciu zderivujeme.
+
+\begin{displaymath}
+u'(x)=\frac{1}{2}(x^4 -2x^3 + 2x + 1)^{-\frac{1}{2}}\cdot(4x^3 - 6x^2 + 2)
+\end{displaymath}
+
+\begin{displaymath}
+u'(x)=\frac{2x^3 - 3x^2 + 1}{\sqrt[2]{x^4 -2x^3 + 2x + 1}}
+\end{displaymath}
+
+Výraz v menovateli nebude nikdy nadobúdať hodnoty 
+\begin{displaymath}
+k(x)=x^4 -2x^3 + 2x + 1
+\end{displaymath}
+Nebudeme počítať deriváciu s odmocninou, tá umiestnenie minima nezmení
+\begin{displaymath}
+k'(x)=4x^3 -6x^2 + 2
+\end{displaymath}
+Nájdeme dva podozrivé body: 1 a $-\frac{1}{2}$
+Keď overíme monotónnosť funkcie, v x=1 je len inflexný bod a v x=$-\frac{1}{2}$ globálne minimum.
+
+Ak dosdíme naše minimum do funkcie k, zistíme že pod odmocninou bude minimálne hodnota \(\frac{5}{16}\), čiže náš menovateľ je vždy definovaný na celom definičnom obore.
+\begin{displaymath}
+k(-\frac{1}{2})=-\frac{1}{2}^4 -2-\frac{1}{2}^3 + 2-\frac{1}{2} + 1
+\end{displaymath}
+
+\begin{displaymath}
+k(-\frac{1}{2})=\frac{5}{16}
+\end{displaymath}
+
+Čitateľa si upravíme pomocou Hornerovej schémy na prívetivejší tvar
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{l||l|l|l|l|l}
+	 & 4 & -6 &  0 & 2 &    \\ \hline\hline
+   1 & 4 & -2 & -2 & 0 & OK \\ \hline
+   1 & 4 &  2 &  0 &   & OK \\
+\end{tabular}
+\caption{Hornerovo schéma}
+\end{table}
+
+Dostávame v čitateli
+
+\begin{displaymath}
+l(x)=(x-1)^2\cdot (4x +2)
+\end{displaymath}
+
+Nájdeme si podozrivé body, znovu použijeme Hornerovo schéma
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{l||l|l|l|l|l}
+	 & 2 & -3 &  0 & 1 &    \\ \hline\hline
+   1 & 2 & -1 & -1 & 0 & OK \\ \hline
+   1 & 2 &  1 &  0 &   & OK \\
+\end{tabular}
+\caption{Hornerovo schéma}
+\end{table}
+
+\begin{displaymath}
+l(x)=(x-1)^2\cdot (2x +1)
+\end{displaymath}
+
+Podozrivé body: 1, \(-\frac{1}{2}\)
+
+Keď vyšetríme monotónnosť, tak sa z 1 stane inflexný bod a z \(-\frac{1}{2}\) sa stane globálne minimum.
+Už stačí vypočítať funkčnú hodnotu v globálnom minime.
+
+\begin{displaymath}
+f(-\frac{1}{2})= x^2 - x
+\end{displaymath}
+
+\begin{displaymath}
+f(-\frac{1}{2})= \frac{3}{4}
+\end{displaymath}
+
+Najbližší bod k bodu A, z funkcie f je : [\(-\frac{1}{2}\),\(\frac{3}{4}\)]
  
 \begin{tikzpicture}[scale=4]
 	\draw[->] (-0.3,0) -- (1.3,0) node[right] {$x$};
