@@ -1,3 +1,5 @@
+#!/bin/bash
+
 SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 TEMP_PATH=`tempfile`
