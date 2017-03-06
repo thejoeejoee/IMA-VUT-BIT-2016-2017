@@ -6,15 +6,20 @@ REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
+
 git clone $REPO out
-cd out
+cd out/01
 make
-mv 01/hw.pdf $TEMP_PATH
+mv hw.pdf $TEMP_PATH
 git checkout $TARGET_BRANCH
-mv $TEMP_PATH 01/hw.pdf
-git add 01/hw.pdf
+mv $TEMP_PATH hw.pdf
+git add hw.pdf
+
+git config --global user.email "noreply@travis.com"
+git config --global user.name "Travis CI"
+
 git commit -m "Compiled pdf from ${SHA}."
-git git push $SSH_REPO $TARGET_BRANCH
+git push $SSH_REPO $TARGET_BRANCH
 
 
 # Clean out existing contents
