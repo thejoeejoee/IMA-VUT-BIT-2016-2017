@@ -8,6 +8,7 @@ install:
 script:
     - cd 01
     - make
+    - if [ ! -f hw.pdf ]; then cat hw.log; fi
     - cd ..
 
 after_success:
