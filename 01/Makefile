@@ -5,5 +5,5 @@ all:
 
 install: 
 	- apt-get update
-	- apt-get install inkscape texlive-latex-extra texlive-fonts-extra texlive-latex-recommended texlive-lang-czechslovak gnuplot gnuplot-tex
+	- apt-get install inkscape texlive-latex-extra texlive-fonts-extra texlive-latex-recommended texlive-lang-czechslovak gnuplot
 
