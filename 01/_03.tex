@@ -2,7 +2,6 @@
 \subsection{Zadání}
 
 Na grafu funkce \(f(x) = x^2 - x\) najděte bod, který má nejkratší vzdálenost od bodu \(A = [0, 1]\). Řešte jako úlohu na extrém.
-\todo{3. úkol}
 
 \subsection{Řešení}
 
@@ -51,14 +50,14 @@ k(-\frac{1}{2})=\frac{5}{16}
 
 Čitateľa si upravíme pomocou Hornerovej schémy na prívetivejší tvar
 
-\begin{table}[htb]
+\begin{table}[!h]
 \centering
 \begin{tabular}{l||l|l|l|l|l}
 	 & 4 & -6 &  0 & 2 &    \\ \hline\hline
    1 & 4 & -2 & -2 & 0 & OK \\ \hline
    1 & 4 &  2 &  0 &   & OK \\
 \end{tabular}
-\caption{Hornerovo schéma}
+\caption{Hornerovo schéma pro rozklad $4x^3 - 6x^2 + 2$}
 \end{table}
 
 Dostávame v čitateli
@@ -69,14 +68,14 @@ l(x)=(x-1)^2\cdot (4x +2)
 
 Nájdeme si podozrivé body, znovu použijeme Hornerovo schéma
 
-\begin{table}[htb]
+\begin{table}[!h]
 \centering
 \begin{tabular}{l||l|l|l|l|l}
 	 & 2 & -3 &  0 & 1 &    \\ \hline\hline
    1 & 2 & -1 & -1 & 0 & OK \\ \hline
    1 & 2 &  1 &  0 &   & OK \\
 \end{tabular}
-\caption{Hornerovo schéma}
+\caption{Hornerovo schéma pro rozklad $3x^3 - 3x^2 + 1$}
 \end{table}
 
 \begin{displaymath}
