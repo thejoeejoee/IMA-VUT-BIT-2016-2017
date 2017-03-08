@@ -3,6 +3,11 @@
 
 Na grafu funkce \(f(x) = x^2 - x\) najděte bod, který má nejkratší vzdálenost od bodu \(A = [0, 1]\). Řešte jako úlohu na extrém.
 
+\subsection{Rozbor příkladu}
+
+Nejdříve musíme zjistit účelovou funkci, u které funkční hodnota je vzdálenost mezi bodem \(A\) a bodem ležícím na funkci \(f\).
+Následně budeme hledat minima naši účelové funkce \(U\). A globální minimum funkce \(U\) bude souřadnice na ose \(x\) hledaného bodu.
+
 \subsection{Řešení}
 
 \begin{figure}[H]
@@ -16,7 +21,7 @@ Na grafu funkce \(f(x) = x^2 - x\) najděte bod, který má nejkratší vzdálen
 	\caption{Nákres funkce $f$ a bodu $A$}
 \end{figure}
 
-Určíme si účelovú funkciu, ktorej funkčné hodnoty budú nadobúdať hodnoty vzdialenosti od daného bodu A.
+Určíme si účelovou funkce \(U\), jejiž funkční hodnoty nabývají hodnoty vzdálenosti mezi body A a bodem ležící na funkci \(f\).
 
 \begin{displaymath}
 u(x)=\sqrt[2]{(x-x_0)^2 + (y-y_0)^2}
@@ -28,8 +33,8 @@ u(x)=\sqrt[2]{(x-0)^2 + (x^2-x-1)^2}
 u(x)=(x^4 -2x^3 + 2x + 1)^{\frac{1}{2}}
 \end{displaymath}
 
-Zo zadania vyplýva, že máme nájsť x, ktorého funkčná hodnota je najmenšia, čiže najkratšia vzdialenosť. \\
-K nájdeniu globálneho minima funkciu zderivujeme.
+Ze zadání vyplývá, že máme najít takové \(x\), jehož funkční hodnota je nejmenší, respektive nejkratší vzdálenost. \\
+K nalezení minima zderivujeme funkci.
 
 \begin{displaymath}
 u'(x)=\frac{1}{2}(x^4 -2x^3 + 2x + 1)^{-\frac{1}{2}}\cdot(4x^3 - 6x^2 + 2)
@@ -39,28 +44,21 @@ u'(x)=\frac{1}{2}(x^4 -2x^3 + 2x + 1)^{-\frac{1}{2}}\cdot(4x^3 - 6x^2 + 2)
 u'(x)=\frac{2x^3 - 3x^2 + 1}{\sqrt[2]{x^4 -2x^3 + 2x + 1}}
 \end{displaymath}
 
-Výraz v menovateli nebude nikdy nadobúdať hodnoty 
+Podezřelé body jsou v místech, kdy funkce nabývá nulové nebo nedefinované hodnoty. 
+Jediné situace, kdy bude mít funkce nedefinované hodnoty, je když bude ve jmenovateli hodnota 0 nebo výraz pod od mocninou bude záporný.
+Abychom zjistili, zda bude někdy výraz pod odmocninou někdy záporný, či nulový, tak budeme hledat opět extrémy výrazu pod odmocninou, dále funkce \(k\).
+
+%Výraz v menovateli nebude nikdy nadobúdať hodnoty 
 \begin{displaymath}
 k(x)=x^4 -2x^3 + 2x + 1
 \end{displaymath}
-Nebudeme počítať deriváciu s odmocninou, tá umiestnenie minima nezmení
+%Nebudeme počítať deriváciu s odmocninou, tá umiestnenie minima nezmení
+Opět funkci zderivujeme a najdeme pouze nulové body, protože tato funkce má \(\implies D(f) = \mathbb{R}\).
 \begin{displaymath}
 k'(x)=4x^3 -6x^2 + 2
 \end{displaymath}
-Nájdeme dva podozrivé body: $1$ a $-\frac{1}{2}$
-Keď overíme monotónnosť funkcie, v $x=1$ je len inflexný bod a v $x=-\frac{1}{2}$ globálne minimum.
 
-Ak dosdíme naše minimum do funkcie k, zistíme že pod odmocninou bude minimálne hodnota \(\frac{5}{16}\), čiže náš menovateľ je vždy definovaný na celom definičnom obore.
-\begin{displaymath}
-k(-\frac{1}{2})=-\frac{1}{2}^4 -2-\frac{1}{2}^3 + 2-\frac{1}{2} + 1
-\end{displaymath}
-
-\begin{displaymath}
-k(-\frac{1}{2})=\frac{5}{16}
-\end{displaymath}
-
-Čitateľa si upravíme pomocou Hornerovej schémy na prívetivejší tvar
-
+Výraz si upravíme pomocí Hornerova schématu, aby se nám snadněji zjišťovaly snadněji nulové body.
 \begin{table}[!h]
 \centering
 \begin{tabular}{l||l|l|l|l|l}
@@ -71,13 +69,34 @@ k(-\frac{1}{2})=\frac{5}{16}
 \caption{Hornerovo schéma pro rozklad $4x^3 - 6x^2 + 2$}
 \end{table}
 
-Dostávame v čitateli
+Po úpravě dostaneme \(k'(x)=(x-1)^2(4x + 2)\), najdeme podezřivé body, které jsou: $1$ a $-\frac{1}{2}$\\.
+
+\begin{figure}[H]
+	\centering
+	\includesvg[width=.45\textwidth]{assets/osa}
+	\caption{Monotónost funkce \(k\)}
+\end{figure}
+
+Když ověříme monotónost funkce, tak zjistíme, že v $x=1$ je pouze inflexní bod a v $x=-\frac{1}{2}$ minimum, 
+které můžeme označit za globální, protože na intervalu \(\langle-\frac{1}{2},+\infty\rangle\) je funkce rostoucí 
+a na intervalu \(\langle-\infty,-\frac{1}{2}\rangle\) je klesající.
 
 \begin{displaymath}
-l(x)=(x-1)^2\cdot (4x +2)
+k(-\frac{1}{2})=-\frac{1}{2}^4 -2-\frac{1}{2}^3 + 2-\frac{1}{2} + 1
 \end{displaymath}
 
-Nájdeme si podozrivé body, znovu použijeme Hornerovo schéma
+\begin{displaymath}
+k(-\frac{1}{2})=\frac{5}{16}
+\end{displaymath}
+
+Když dosadíme naše minimum do funkce \(k\), zjistíme, že pod odmocninou bude minimální hodnota \(\frac{5}{16}\), tudíž jmenovatel nikdy nenabyde nulové nebo nedefinované hodnoty.
+
+Čitatele si upravíme pomocí Hornerova schématu, aby se nám snadněji zjišťovaly snadněji nulové body.
+
+Jelikož jsme předtím zjistili, že jmenovatel bude vždy nabývat nenulové a definované hodnoty, 
+tak můžeme jmenovatel zanedbat při hledání minima funkce \(f\).\\
+
+Pro úpravu výrazu opět použijeme Hornerovo schéma.
 
 \begin{table}[!h]
 \centering
@@ -86,17 +105,25 @@ Nájdeme si podozrivé body, znovu použijeme Hornerovo schéma
    1 & 2 & -1 & -1 & 0 & OK \\ \hline
    1 & 2 &  1 &  0 &   & OK \\
 \end{tabular}
-\caption{Hornerovo schéma pro rozklad $3x^3 - 3x^2 + 1$}
+\caption{Hornerovo schéma pro rozklad $2x^3 - 3x^2 + 1$}
 \end{table}
 
 \begin{displaymath}
-l(x)=(x-1)^2\cdot (2x +1)
+f(x)=(x-1)^2\cdot (2x +1)
 \end{displaymath}
 
-Podozrivé body: 1, \(-\frac{1}{2}\)
+Podezřivé body: 1, \(-\frac{1}{2}\)
 
-Keď vyšetríme monotónnosť, tak sa z 1 stane inflexný bod a z \(-\frac{1}{2}\) sa stane globálne minimum.
-Už stačí vypočítať funkčnú hodnotu v globálnom minime.
+\begin{figure}[H]
+	\centering
+	\includesvg[width=.45\textwidth]{assets/osa}
+	\caption{Monotónost funkce \(f\)}
+\end{figure}
+
+Opět když ověříme monotónost funkce, tak zjistíme, že v $x=1$ je pouze inflexní bod a v $x=-\frac{1}{2}$ minimum, 
+které můžeme označit za globální, protože na intervalu \(\langle-\frac{1}{2},+\infty\rangle\) je funkce rostoucí 
+a na intervalu \(\langle-\infty,-\frac{1}{2}\rangle\) je klesající.\\
+Nyní dosadíme do naší původní funkce, abychom našli souřadnici na ose \(y\) hledaného bodu.
 
 \begin{displaymath}
 f(-\frac{1}{2})= x^2 - x
@@ -106,4 +133,4 @@ f(-\frac{1}{2})= x^2 - x
 f(-\frac{1}{2})= \frac{3}{4}
 \end{displaymath}
 
-Najbližší bod k bodu A, z funkcie f je : [\(-\frac{1}{2}\),\(\frac{3}{4}\)]
+Nejbližší bod k bodu A, z funkce \(f\) je : [\(-\frac{1}{2}\),\(\frac{3}{4}\)]
