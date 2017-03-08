@@ -5,8 +5,8 @@ Na grafu funkce \(f(x) = x^2 - x\) najděte bod, který má nejkratší vzdálen
 
 \subsection{Rozbor příkladu}
 
-Prvně nadefinujeme účelovou funkci, u které funkční hodnota je vzdálenost mezi bodem \(A\) a bodem ležícím na funkci \(f\).
-Následně budeme hledat minima naší účelové funkce \(U\). A globální minimum funkce \(U\) bude souřadnice na ose \(x\) hledaného bodu.
+Prvně nadefinujeme účelovou funkci, u~které funkční hodnota je vzdálenost mezi bodem \(A\) a bodem ležícím na funkci \(f\).
+Následně budeme hledat minima naší účelové funkce \(U\). A~globální minimum funkce \(U\) bude souřadnice na ose \(x\) hledaného bodu.
 
 \subsection{Řešení}
 \begin{figure}[H]
@@ -20,7 +20,7 @@ Následně budeme hledat minima naší účelové funkce \(U\). A globální min
 	\caption{Nákres funkce $f$ a bodu $A$}
 \end{figure}
 
-Určíme si účelovou funkci \(U\), jejiž funkční hodnoty nabývají hodnoty vzdálenosti mezi body A a bodem ležící na funkci \(f\).
+Určíme si účelovou funkci \(U\), jejiž funkční hodnoty nabývají hodnoty vzdálenosti mezi body A~a bodem ležící na funkci \(f\).
 
 \begin{displaymath}
 u(x)=\sqrt[2]{(x-x_0)^2 + (y-y_0)^2}
@@ -33,7 +33,7 @@ u(x)=(x^4 -2x^3 + 2x + 1)^{\frac{1}{2}}
 \end{displaymath}
 
 Ze zadání vyplývá, že máme najít takové \(x\), jehož funkční hodnota je nejmenší, respektive má nejkratší vzdálenost od bodu \(A\). \\
-K nalezení minima zderivujeme funkci.
+K~nalezení minima zderivujeme funkci.
 
 \begin{displaymath}
 u'(x)=\frac{1}{2}(x^4 -2x^3 + 2x + 1)^{-\frac{1}{2}}\cdot(4x^3 - 6x^2 + 2)
@@ -43,9 +43,9 @@ u'(x)=\frac{1}{2}(x^4 -2x^3 + 2x + 1)^{-\frac{1}{2}}\cdot(4x^3 - 6x^2 + 2)
 u'(x)=\frac{2x^3 - 3x^2 + 1}{\sqrt[2]{x^4 -2x^3 + 2x + 1}}
 \end{displaymath}
 
-Podezřelé body jsou v místech, kdy funkce nabývá nulové nebo nedefinované hodnoty. 
-Jediná situace, kdy bude mít funkce nedefinované hodnoty, je v případě nulového jmenovatele nebo záporné hodnoty pod druhou odmocninou.
-K zjištění, zda bude někdy výraz pod odmocninou někdy záporný či nulový, budeme hledat opět extrémy výrazu pod odmocninou (dále funkce \(k\)).
+Podezřelé body jsou v~místech, kdy funkce nabývá nulové nebo nedefinované hodnoty. 
+Jediná situace, kdy bude mít funkce nedefinované hodnoty, je v~případě nulového jmenovatele nebo záporné hodnoty pod druhou odmocninou.
+K~zjištění, zda bude někdy výraz pod odmocninou někdy záporný či nulový, budeme hledat opět extrémy výrazu pod odmocninou (dále funkce \(k\)).
 
 %Výraz v menovateli nebude nikdy nadobúdať hodnoty 
 \begin{displaymath}
@@ -76,7 +76,7 @@ Po úpravě dostaneme \(k'(x)=(x-1)^2(4x + 2)\), najdeme podezřelé body, kter�
 	\caption{Monotónost funkce \(k\)}
 \end{figure}
 
-Po ověření monotónosti zjistíme, že v $x=1$ je pouze inflexní bod a v $x=-\frac{1}{2}$ minimum, 
+Po ověření monotónosti zjistíme, že v~$x=1$ je pouze inflexní bod a v~$x=-\frac{1}{2}$ minimum, 
 které můžeme označit za globální, protože na intervalu \(\langle-\frac{1}{2},+\infty\rangle\) je funkce rostoucí 
 a na intervalu \(\langle-\infty,-\frac{1}{2}\rangle\) je klesající.
 
@@ -92,7 +92,7 @@ Po dosazení našeho minima do funkce \(k\) zjistíme, že pod odmocninou bude m
 
 Čitatele si upravíme pomocí Hornerova schématu, aby se nám snadněji zjišťovaly snadněji nulové body.
 
-Vzhledem k předchozímu zjištění, že jmenovatel bude vždy nabývat nenulové a definované hodnoty, můžeme jmenovatel zanedbat při hledání minima funkce \(f\).\\
+Vzhledem k~předchozímu zjištění, že jmenovatel bude vždy nabývat nenulové a definované hodnoty, můžeme jmenovatel zanedbat při hledání minima funkce \(f\).\\
 
 Pro úpravu výrazu opět použijeme Hornerovo schéma.
 
@@ -118,7 +118,7 @@ Podezřelé body: 1, \(-\frac{1}{2}\)
 	\caption{Monotónost funkce \(f\)}
 \end{figure}
 
-Opět když ověříme monotónnost funkce, tak zjistíme, že v $x=1$ je pouze inflexní bod a v $x=-\frac{1}{2}$ minimum, 
+Opět když ověříme monotónnost funkce, tak zjistíme, že v~$x=1$ je pouze inflexní bod a v~$x=-\frac{1}{2}$ minimum, 
 které můžeme označit za globální, protože na intervalu \(\langle-\frac{1}{2},+\infty\rangle\) je funkce rostoucí 
 a na intervalu \(\langle-\infty,-\frac{1}{2}\rangle\) je klesající.\\
 Nyní dosadíme do naší původní funkce, abychom našli souřadnici na ose \(y\) hledaného bodu.
@@ -131,4 +131,4 @@ f(-\frac{1}{2})= x^2 - x
 f(-\frac{1}{2})= \frac{3}{4}
 \end{displaymath}
 
-Nejbližší bod na funkci $f$ k bodu A je bod $\big[-\frac{1}{2}, \frac{3}{4}\big]$.
+Nejbližší bod na funkci $f$ k~bodu A~je bod $\big[-\frac{1}{2}, \frac{3}{4}\big]$.

@@ -26,7 +26,7 @@ Vodorovnou asymptotou rozumíme přímku ve tvaru $y=a$, jestliže
 Šikmou asymptotou rozumíme přímku, ve tvaru $y=ax+b;a \neq 0$. Koeficienty $A$ a $B$ jsou definovány jako
 
 \begin{displaymath}
-A = \lim_{x \rightarrow \infty}\Big( \frac{f(x)}{x}\Big) \quad\wedge\quad B = \lim_{a \rightarrow b}\big(\,f(x)-Ax\,\big)
+A~= \lim_{x \rightarrow \infty}\Big( \frac{f(x)}{x}\Big) \quad\wedge\quad B = \lim_{a \rightarrow b}\big(\,f(x)-Ax\,\big)
 \end{displaymath}
 
 Tyto limity je třeba najít a ověřit.
@@ -34,13 +34,13 @@ Tyto limity je třeba najít a ověřit.
 \subsection{Řešení}
 
 \subsubsection{Svislé asymptoty}
-Funkce může mít svislou asymptotu pouze v bodech, ve kterých je nespojitá. Určíme si proto body nespojitosti. Budou to body, ve kterých jmenovatel argumentu funkce $arctg(x) = 0$, protože nulou nelze dělit.
+Funkce může mít svislou asymptotu pouze v~bodech, ve kterých je nespojitá. Určíme si proto body nespojitosti. Budou to body, ve kterých jmenovatel argumentu funkce $arctg(x) = 0$, protože nulou nelze dělit.
 
 \begin{displaymath}
 x^2-1 \neq 0 \implies x \neq 1 \wedge x \neq -1 \implies D(f) = \mathbb{R}
 \end{displaymath}
 
-Limita ze součinu dvou závorek je rovna $ \pm \infty$, pokud alespoň jedna z těchto závorek je rovna $\pm \infty$. Obor hodnot funkce $arctg(x) = (-\pi/2,\pi/2)$. Můžeme tedy říct, že $\frac{\pi}{4}-arctg(\frac{x^2}{x^2-1})$ se nikdy nebude limitně blížit k $\pm \infty$. Musel by se výraz $x^2$ rovnat v bodech nespojitosti $\pm \infty$. Vzhledem k tomu, že $(-1)^2 = 1^2 = 1$, můžeme tvrdit, že funkce nemá svisou asymptotu, protože v bodech $\{-1,1\}$ je nespojitost prvního druhu. Ve výpočtu není třeba dále pokračovat.
+Limita ze součinu dvou závorek je rovna $ \pm \infty$, pokud alespoň jedna z~těchto závorek je rovna $\pm \infty$. Obor hodnot funkce $arctg(x) = (-\pi/2,\pi/2)$. Můžeme tedy říct, že $\frac{\pi}{4}-arctg(\frac{x^2}{x^2-1})$ se nikdy nebude limitně blížit k~$\pm \infty$. Musel by se výraz $x^2$ rovnat v~bodech nespojitosti $\pm \infty$. Vzhledem k~tomu, že $(-1)^2 = 1^2 = 1$, můžeme tvrdit, že funkce nemá svisou asymptotu, protože v~bodech $\{-1,1\}$ je nespojitost prvního druhu. Ve výpočtu není třeba dále pokračovat.
 
 \subsubsection{Vodorovné asymptoty}
 
@@ -72,7 +72,7 @@ Což platí. Funkce má tedy nanejvýše jednu vodorovnou asymptotu. Pro výpoč
 = \lim_{x \to \pm \infty} \frac{-x^4+2x^2-1}{2x^4-2x^2+1} \cdot \frac{x^4}{x^4-2x^2+1} = \lim_{x \to \pm \infty} \frac {x^8\cdot(-1+ \overbrace{\cdots}^{\rightarrow0})}{x^8\cdot (2 +\underbrace{\cdots}_{\rightarrow0})} = -\frac{1}{2}
 \end{displaymath}
 
-Funkce má tedy jedinou vodorovnou asymtotu s rovnicí
+Funkce má tedy jedinou vodorovnou asymtotu s~rovnicí
 \begin{displaymath}
 y = - \frac{1}{2}
 \end{displaymath}
