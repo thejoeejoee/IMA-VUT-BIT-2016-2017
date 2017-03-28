@@ -11,7 +11,7 @@ SHA=`git rev-parse --verify HEAD`
 
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 git clone $REPO out
-
+cd out
 make
 mv 01/hw.pdf $TEMP_PATH1
 mv 02/hw.pdf $TEMP_PATH2
