@@ -18,8 +18,8 @@ mv 02/hw.pdf $TEMP_PATH2
 git checkout $TARGET_BRANCH
 mv $TEMP_PATH1 01/hw.pdf
 mv $TEMP_PATH2 02/hw.pdf
-git add 01/hw.pdf
-git add 02/hw.pdf
+git add -f 01/hw.pdf
+git add -f 02/hw.pdf
 
 git config --global user.email "noreply@travis.com"
 git config --global user.name "Travis CI"
