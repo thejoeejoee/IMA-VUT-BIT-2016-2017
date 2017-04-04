@@ -14,4 +14,45 @@ f(x,y,z) = 6x^2 + 5y^2 + 14z^2 + 4xy - 8xz - 2yz +1
 	\item Sestavíme si Hassovu matici z derivací druhého řádu a dosadíme do ní jednotlivé podezřelé body. Zda se jedná o extrém nebo ne poznáme z hodnot subdeterminantů této matice.
 \end{enumerate}
 
+\subsection*{Řešení}
+Výpočet parciálních derivací
+\begin{eqnarray}
+f'_x  & = & 12x + 4y - 8z \nonumber \\
+f'_y  & = & 10y + 4x - 2z \nonumber \\
+f'_z  & = & 28z - 8x - 2y \nonumber
+\end{eqnarray}
+
+\noindent Položením parciálních derivací $0$ získáme soustavu rovnic. 
+
+\begin{eqnarray}
+12x + 4y - 8z & = & 0\nonumber \\
+10y + 4x - 2z & = & 0\nonumber \\
+28z - 8x - 2y & = & 0\nonumber
+\end{eqnarray}
+
+Jedná se o homogenní soustavu tří rovnic o třech neznámých. Řešením soustavy je jeden bod o souřadniciích $[0,0,0]$ Sestavíme si Hassovu matici
+
+\begin{displaymath}
+A = \begin{bmatrix}
+f''_{xx} & f''_{xy} &  f''_{xz}\\
+f''_{yx} & f''_{yy} &  f''_{yz}\\
+f''_{zx} & f''_{zy} &  f''_{zz}\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+12 & 4 & -8\\
+4 & 10 & -2\\
+-8 & -2 & 28\\
+\end{bmatrix}
+\end{displaymath}
+
+\begin{displaymath}
+D_1 = 12 > 0 \qquad D_2 = 104 > 0 \qquad D_3 = 2352 > 0
+\end{displaymath}
+
+Všechny subdeterminanty v jsou kladné. Z toho lze vyvodit, že funkce má v bodě $[0, 0, 0]$ lokální minimumum. Jeho hodnota je.
+
+\begin{displaymath}
+f(0,0,0) = 6\cdot0^2 + 5\cdot0^2 + 14\cdot0^2 + 4\cdot0\cdot0 - 8\cdot0\cdot0 - 2\cdot0\cdot0 + 1 = 1
+\end{displaymath}
 
