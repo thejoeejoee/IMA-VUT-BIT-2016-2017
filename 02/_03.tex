@@ -1,2 +1,36 @@
 \section{3. úkol}
-Pomocí derivace nebo integrace najděte součet řady $\sum\limits_{n=1}^\infty \dfrac{(x-3)^{2n}}{2n}$. Vyšetřete obor konvergence.
+\subsection*{zadání}
+Pomocí derivace nebo integrace najděte součet řady a vyšetřete její obor konvergence.
+
+\begin{eqnarray}
+\sum\limits_{n=1}^\infty \dfrac{(x-3)^{2n}}{2n} \label{eqn:infty}
+\end{eqnarray}
+
+
+\subsection*{Rozbor příkladu}
+Máme vyšetři obor konvergence a majít součet nekonečné řady \ref{eqn:infty}. Najít obor konvergence znamená najít všechna $x$, pro která po dosazení vznikne konvergující číselná řada. Toho dosáhneme za pomoc podílového kritéria.
+
+\subsection*{Řešení}
+Výpočet oboru konvergence:
+
+\begin{displaymath}
+\lim_{n \rightarrow \infty} \dfrac{\big |\,c_{n+1}(x - x_o)^{n + 1}\,\big |}{\big | \,c_n(x - x_o)^{n} \, \big |} = 
+\lim_{n \rightarrow \infty}  \dfrac{\dfrac{\big |\,x - 3\, \big|^{2(n+1)}}{2(n+1)}}{\dfrac{\big | \, x-3\, \big |^{2n}}{2n}} =
+\lim_{n \rightarrow \infty} \dfrac{2n \big |\,x-3\,\big |^{2n+2}}{2(n+1)\big |\,x-3\,\big |^{2n}} = 
+\lim_{n \rightarrow \infty}  \frac{n\big |\,x-3\,\big |^{2}}{n+1} = 
+\end{displaymath}
+
+\begin{displaymath}
+= \big |\,x-3\,\big |^{2}\cdot\lim_{n \rightarrow \infty}  \frac{n}{n+1} =
+\big |\,x-3\,\big |^{2}\cdot\overbrace{\lim_{n \rightarrow \infty}  \frac{n}{n+1}}^{\rightarrow 1} = \big |\,x-3\,\big |^{2}
+\end{displaymath}
+\vspace{18px}
+
+\noindent Budeme hledat takové hodnoty, pro které je výraz $\big |\,x-3\,\big |^{2} < 0$
+
+\begin{displaymath}
+\big |\,x-3\,\big |^{2} < 0\Leftrightarrow \big |\,x-3\,\big | < 0 \Leftrightarrow x \in (2, 4)
+\end{displaymath}
+
+\noindent Obor konvergence je tedy interval $(2, 4)$
+
