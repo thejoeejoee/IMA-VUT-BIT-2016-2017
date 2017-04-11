@@ -11,7 +11,7 @@ Pomocí derivace nebo integrace najděte součet řady a vyšetřete její obor 
 Máme vyšetři obor konvergence a majít součet nekonečné řady \ref{eqn:infty}. Najít obor konvergence znamená najít všechna $x$, pro která po dosazení vznikne konvergující číselná řada. Toho dosáhneme za pomoc podílového kritéria.
 
 \subsection*{Řešení}
-Výpočet oboru konvergence:
+\subsubsection{Výpočet oboru konvergence}
 
 \begin{displaymath}
 \lim_{n \rightarrow \infty} \dfrac{\big |\,c_{n+1}(x - x_o)^{n + 1}\,\big |}{\big | \,c_n(x - x_o)^{n} \, \big |} = 
@@ -32,5 +32,21 @@ Výpočet oboru konvergence:
 \big |\,x-3\,\big |^{2} < 0\Leftrightarrow \big |\,x-3\,\big | < 0 \Leftrightarrow x \in (2, 4)
 \end{displaymath}
 
-\noindent Obor konvergence je tedy interval $(2, 4)$
+\noindent Dále musíme prověřit krajní body intervalu.
+
+\begin{eqnarray}
+\sum_{n=1}^{\infty} \dfrac{1^{2n}}{n^2} = \sum_{n=1}^{\infty} \dfrac{1}{n^2}
+\label{eqn:odvozenaSuma}
+\end{eqnarray}
+
+\noindent Konverguje k číslu $1.6493\cdots$
+\begin{displaymath}
+\sum_{n=1}^{\infty} \dfrac{(-1)^{2n}}{n^2} = \sum_{n=1}^{\infty} \dfrac{1}{n^2}
+\end{displaymath}
+\noindent Což konverguje, viz. \ref{eqn:odvozenaSuma}
+
+\noindent Obor konvergence je tedy interval $<2, 4>$
+
+\subsubsection{Výpočet součtu nekonečné řady}
+
 
