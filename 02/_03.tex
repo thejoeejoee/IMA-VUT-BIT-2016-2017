@@ -8,7 +8,7 @@ Pomocí derivace nebo integrace najděte součet řady a vyšetřete její obor 
 
 
 \subsection*{Rozbor příkladu}
-Máme vyšetři obor konvergence a majít součet nekonečné řady \ref{eqn:infty}. Najít obor konvergence znamená najít všechna $x$, pro která po dosazení vznikne konvergující číselná řada. Toho dosáhneme za pomoc podílového kritéria.
+Máme vyšetři obor konvergence a majít součet nekonečné řady \ref{eqn:infty}. Najít obor konvergence znamená najít všechna $x$, pro která po dosazení vznikne konvergující číselná řada. Toho dosáhneme za pomoc podílového kritéria. D8le máme vypočítat součet řady za pomoci derivace nebo integrace. Řadu si upravíme tak, aby $n$ začínalo na hodnotě nula a provedeme integraci řady.
 
 \subsection*{Řešení}
 \subsubsection{Výpočet oboru konvergence}
@@ -35,18 +35,36 @@ Máme vyšetři obor konvergence a majít součet nekonečné řady \ref{eqn:inf
 \noindent Dále musíme prověřit krajní body intervalu.
 
 \begin{eqnarray}
-\sum_{n=1}^{\infty} \dfrac{1^{2n}}{n^2} = \sum_{n=1}^{\infty} \dfrac{1}{n^2}
+\sum_{n=1}^{\infty} \dfrac{1^{2n}}{2n} = \sum_{n=1}^{\infty} \dfrac{1}{2n}\\
 \label{eqn:odvozenaSuma}
 \end{eqnarray}
 
-\noindent Konverguje k číslu $1.6493\cdots$
+\noindent Jedná se o řadu, o které víme že diverguje.
 \begin{displaymath}
-\sum_{n=1}^{\infty} \dfrac{(-1)^{2n}}{n^2} = \sum_{n=1}^{\infty} \dfrac{1}{n^2}
+\sum_{n=1}^{\infty} \dfrac{(-1)^{2n}}{2n} = \sum_{n=1}^{\infty} \dfrac{1}{2n}
 \end{displaymath}
-\noindent Což konverguje, viz. \ref{eqn:odvozenaSuma}
+\noindent Což diverguje, viz. \ref{eqn:odvozenaSuma}
 
-\noindent Obor konvergence je tedy interval $<2, 4>$
+\noindent Obor konvergence je tedy interval $(2, 4)$
 
 \subsubsection{Výpočet součtu nekonečné řady}
+
+\begin{displaymath}
+\sum_{a = 1}^{\infty} \dfrac{(x - 3)^{2n}}{2n} = \sum_{a = 0}^{\infty} \dfrac{(x - 3)^{2(n + 1)}}{2(n + 1)} = \int_{3}^{x} \sum_0^{\infty} (x - 3)^{2n - 1} =
+\end{displaymath}
+
+Vnitřní řada je geometrická řada, pro kterou platí
+\begin{displaymath}
+a1 = x - 3 \qquad q = (x - 2)^2
+\end{displaymath}
+
+\begin{displaymath}
+= \int_{3}^{x} \dfrac{x - 3}{1 - (x - 3)^2}dx =  \int_{3}^{x} \dfrac{x - 3}{- x^2+6x-8}dx = - \frac{1}{2}  \int_{3}^{x} \dfrac{-2x + 6}{- x^2+6x-8}dx =- \frac{1}{2} \Big [  \mbox{ln}(-x + 6x - 8) \Big ]_3^x = 
+\end{displaymath}
+
+\begin{displaymath}
+= - \frac{1}{2} \mbox{ln}(-x^2 + 6x - 8)
+\end{displaymath}
+
 
 
