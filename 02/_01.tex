@@ -2,21 +2,46 @@
 Vyšetřete lokální extrémy funkce $f(x) = \int\limits_0^x t(t-1)(t-5)\mathrm{d}t$.
 
 \subsection*{Rozbor řešení}
-Budeme hledat lokální extrémy funkce, kterou získáme zintegrováním zadaného určitého integrálu v~intervalu $\langle 0, x \rangle$.
+Budeme hledat lokální extrémy funkce, která je dána hodnotou určitého integrálu  $\langle 0, x \rangle$. Zjistíme si tedy funkci, která určuje hodnotu tohoto integrálu, poté nalezneme podezřelé body a přidáme k nim krajní bod, ve kterém je hodnota integrálu 0, dosadíme do 
 
 \subsection*{Řešení}
-\begin{align*}
-	f(x) = \int_0^x t(t-1)(t-5)\mathrm{d}t & = \int_0^x (t^3 - 6t^2 + 5t)\mathrm{d}t = \Big[\frac{t^4}{4} - 2t^3 + \frac{5t^2}{2}\Big]_0^x \\
-	f(x) & = \frac{x^4}{4} - 2x^3 + \frac{5x^2}{2} \\
-	f'(x) & = (x^3 - 6x^2 + 5x)\mathrm{d}x \\
-	f'(x) & = 0  \rightarrow (x^3 - 6x^2 + 5x) = x(x - 5)(x - 1) \\
-	x_1 & = 0 \qquad x_2 = 1\qquad x_3 = 5 \\
-\end{align*}
 
-Nyní máme tři $x$, ve kterých první derivace určitého integrálu je rovna nule, tato $x$ tedy označíme jako $x$ podezřelá z~extrémů. Dosazením do $F(x)$ získáme hodnoty konkrétních určitých integrálů v~podezřelých $x$.
+\noindent Nalezení funkce, která určuje hodnotu určitého integrálu
+\begin{displaymath}
+	f(x) = \int_0^x t(t-1)(t-5)\mathrm{d}t & = \int_0^x (t^3 - 6t^2 + 5t)\mathrm{d}t = \Big[\frac{t^4}{4} - 2t^3 + \frac{5t^2}{2}\Big]_0^x = \frac{x^4}{4} - 2x^3 + \frac{5x^2}{2}
+\end{displaymath}
+
+\noindent Nalezení podezřelých bodů
+\begin{displaymath}
+	f'(x) & = x^3 - 6x^2 + 5x
+\end{displaymath}
+\begin{eqnarray}
+	f'(x) & = & 0 \nonumber\\
+    x^3 - 6x^2 + 5x & = & 0 \nonumber \\
+    x(x - 5)(x - 1) & = & 0 \nonumber
+\end{eqnarray}
+\begin{displaymath}
+	x_1 = 1\qquad x_2 = 5  
+\end{displaymath}
+
+Nyní máme dvě hodnoty funkce, ve kterých může nabývat extrému. K těmto dvoum hodnotá ještě přičteme bod $x_3 = 0$
+
+Nyní máme tři $x$, ve kterých první derivace určitého integrálu je rovna nule. U hodnot $x_2 \text{ a } x_3$ musíme ještě rozhodnout, zda se jedná o skutečné extrémy nebo jen inflexní body. Tedy označíme $x_2 \text{ a } x_3$ jako podezřelá z~extrémů.
+
+\begin{eqnarray}
+f'(0.5) = 1.125 \quad f'(2) = -6 \Rightarrow \mbox{Lokální maximum} \nonumber \\
+f'(2) = -6 \quad f'(6) = 30 \Rightarrow \mbox{Lokální minimum} \nonumber
+\end{eqnarray}
+
+\noindent Dosazením do $f(x)$ získáme hodnoty konkrétních určitých integrálů.
 
 \begin{align*}
 	f(x_1) = 0 \qquad f(x_2) = \frac{3}{4} \qquad f(x_3) = -31.25
 \end{align*}
 
-Nyní můžeme $x_1$ vyloučit, protože se nejedná o~lokální extrém ale pouze o~hodnotu podezřelou z~něj. Řešením je tedy lokální maximum v~bodě $x_2 = 1$, kde je funkční hodnota $\frac{3}{4}$ a lokální minimum v~bodě $x_3 = 5$ s~funkční hodnotou $-31.25$.
+\subsection*{Závěr}
+\noindent Funkce má v bodě $x = 0$ lokální minimum a jeho hodnota je $0$
+
+\noindent Funkce má v bodě $x = 1$ lokální maximum a jeho hodnota je $\frac{3}{4}$
+
+\noindent Funkce má v bode $x = 5$ lokální minimum a jeho hodnota je $-31.25$
